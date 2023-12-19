@@ -1,38 +1,99 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root{
+  width: 100wh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+}
+
+.App{
+  padding: 20px 30px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.app-title{
   text-align: center;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  padding: 5px 0 10px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-task-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addTask-input{
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  height: 32px;
+  font-size: 18px;
+  margin-right: 15px;
+  padding: 0 5px;
+  border: 1px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addTask-btn{
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100px;
+  height: 34px;
+  font-size: 18px;
+  padding: 0 5px;
+  border: 1px solid black;
+  background-color: transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-list{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 0 5px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.task-item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0px;
+  margin: 5px 0;
+  background-color: rgb(179, 179, 179);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-info-box{
+  display: flex;
+  align-items: center;
+}
+.task-text{
+  margin-left: 15px;
+}
+.completed-task{
+  text-decoration: line-through;
+  color: rgb(99, 99, 99);
+}
+
+.completed{
+  margin-left: 10px;
+}
+
+.btns-box{
+  margin-right: 10px;
+}
+
+.btn{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 24px;
+  font-size: 18px;
+  padding: 0 7px;
+  border: 0px solid black;
+  background-color: white;
 }
