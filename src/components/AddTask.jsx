@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { addTask, deleteTask, editTask } from '../taskListSlice';
-import { useSelector, useDispatch } from 'react-redux';
+import { addTask } from '../taskListSlice';
+import { useDispatch } from 'react-redux';
 
 function AddTask() {
-  const taskList = useSelector((state) => state.taskList.tasks);
   const dispatch = useDispatch();
   const [inputContent, setInputContent] = useState({id: 1, title: '', isCompleted: false});
   const handleInputChange = (event) => {

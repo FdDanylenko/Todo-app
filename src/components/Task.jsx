@@ -1,6 +1,6 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { deleteTask, editTask } from '../taskListSlice';
+import { useDispatch } from 'react-redux'
+import { deleteTask } from '../taskListSlice';
 import { useState } from 'react';
 
 function Task(props) {

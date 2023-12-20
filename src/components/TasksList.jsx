@@ -1,12 +1,13 @@
 import React from 'react';
 import Task from './Task';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { selectAllTasks } from '../taskListSlice';
 
 function TasksList() {
-  const taskList = useSelector((state) => state.taskList.tasks);
+  const tasks = useSelector(selectAllTasks);
   return (
     <div className='task-list'>
-      {taskList.map(task => 
+      {tasks.map(task => 
         <Task key={task.id} task={task}/>)}
     </div>
   )
