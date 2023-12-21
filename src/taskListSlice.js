@@ -4,21 +4,20 @@ import { nanoid } from "@reduxjs/toolkit";
 export const taskListSlice = createSlice({
   name: 'tasks',
   initialState: [
-    {id: 1, title: "Test task 1", isCompleted: false},
-    {id: 2, title: "Test task 2", isCompleted: false},
-    {id: 3, title: "Test task 2", isCompleted: false}
+    {id: 1, title: "Test task 1"},
+    {id: 2, title: "Test task 2"},
+    {id: 3, title: "Test task 3"}
   ],
   reducers:{
     addTask: {
       reducer: (state, action) => {
-        state.push({id: new Date().getTime().toString(), title: action.payload.title, isCompleted: action.payload.isCompleted});
+        state.push(action.payload);
       },
       prepare(title){
         return {
           payload: {
             id: nanoid(),
-            title,
-            isCompleted: false
+            title
           }
         }
       }
