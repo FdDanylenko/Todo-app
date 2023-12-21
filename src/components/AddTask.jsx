@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { addTask } from '../taskListSlice';
 import { useDispatch } from 'react-redux';
+import { nanoid } from '@reduxjs/toolkit';
 
 function AddTask() {
   const dispatch = useDispatch();
-  const [inputContent, setInputContent] = useState({id: 1, title: '', isCompleted: false});
+  const [inputContent, setInputContent] = useState('');
   const handleInputChange = (event) => {
-    setInputContent({id: 1, title: event.target.value, isCompleted: false});
+    setInputContent(event.target.value);
   }
 
   const handleAddTask = () => {
-    dispatch(addTask(inputContent));
-    setInputContent({ id: 1, title: '', isCompleted: false });
+    dispatch(addTask(inputContent))
+    setInputContent('')
+
   }
 
   return (
@@ -19,7 +21,7 @@ function AddTask() {
       <input
         type='text'
         className='addTask-input'
-        value={inputContent.title}
+        value={inputContent}
         onChange={handleInputChange}
         placeholder='Add a new task...'
       ></input>
