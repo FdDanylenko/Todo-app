@@ -1,3 +1,8 @@
 # Simple Todo app
 
-Used react-redux in this project
+Used React-Redux and Redux-Toolkit in this project. [Deploy](https://fddanylenko.github.io/Todo-app)
+
+## Tech Stack
+- React
+- JavaScript
+- Redux, Redux Toolkit
